@@ -27,3 +27,8 @@ Example:
 ![image](https://github.com/Sehal-22I-0604/AI_Assignment_2/assets/160497952/82335907-531e-4432-9a0d-3d9738acbf55)
 
 ![image](https://github.com/Sehal-22I-0604/AI_Assignment_2/assets/160497952/7b5a86f8-8ac9-4864-ae14-7c400997fc82)
+
+
+
+I22-0604 Sehal Iqbal
+K22-4066 Syed Ahmed Ishaq
