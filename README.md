@@ -1,37 +1,29 @@
-<b>Heuristic Function</b>
+Heuristic Function:
+Implementation in the Code:
 
-    The heuristic function checks how good a mini Tic Tac Toe board looks for a player, without looking at every possible future move.
-
-Approach:
-
-    Checking for Winning Configurations: It looks for patterns where the player has a good chance of winning, like having three pieces in a row.
-
-    Counting Player and Opponent Pieces: It counts how many pieces the player and opponent have on the board, and how they are positioned.
-
-    Assigning Scores: Based on these counts and positions, it gives a score to the board, showing how promising it looks for the player.
-
-Example:
-
-    If the player has a line of three pieces, it gets a high score.
-    If the opponent has two pieces in a row, it gets a low score.
+    In the code, the heuristic function is named evaluate_heuristic_for_game().
+    This function evaluates the state of a mini Tic Tac Toe board represented by a string
+    It assesses the distribution of player and opponent pieces on the board and assigns a score based on the presence of winning configurations.
+    The function iterates through predefined winning configurations (e.g., three in a row, two in a row) and counts the occurrences of player and opponent pieces within these configurations.
+    Based on these counts, it assigns a score reflecting the desirability of the board state for the player.
 
 Algorithm (Minimax with Alpha-Beta Pruning):
-Purpose:
+Implementation in the Code:
 
-    The algorithm helps the player decide which move to make by thinking ahead but not looking at every possible future move.
-
-Approach:
-
-    Thinking Alternately: It takes turns imagining the player making the best move and then the opponent making the worst move.
-
-    Skipping Bad Moves: It doesn't waste time thinking about bad moves by stopping when it knows there's a better option.
-
-    Estimating Outcomes: At each step, it guesses how good a move might be by using the heuristic function to evaluate the state of the game.
-
-    Looking Backwards: It keeps track of the best options found so far and uses that to decide what to do next.
+    the code implements the Minimax algorithm with alpha-beta pruning in the functions min_turn() and max_turn().
+    These functions perform recursive exploration of successor states, alternating between maximizing the player's score and minimizing the opponent's score 
+    Alpha-beta pruning is applied during the search to efficiently prune branches of the game tree that are guaranteed to be irrelevant to the final decision.
+    The algorithm maintains alpha and beta values representing the best possible scores found so far for the maximizing and minimizing players, respectively.
+    It stops exploring certain branches of the game tree when it knows there's a better option, reducing unnecessary exploration.
+    At leaf nodes or when reaching the depth limit of the search, the algorithm uses the heuristic function to evaluate the state of the game and estimate its desirability for the player.
 
 Example:
+    When the player (human or bot) interacts with the game, the algorithm determines the optimal move by exploring potential moves and outcomes.
+    It evaluates the desirability of game states using the heuristic function and makes decisions accordingly.
+    The algorithm efficiently prunes branches of the game tree using alpha-beta pruning, reducing computational complexity and improving performance.
 
-    It imagines different moves the player could make and how the game might play out.
-    It stops thinking about certain moves if it knows they won't lead to a good outcome.
-    It uses the heuristic function to guess how good a move might be without considering every possibility.
+![image](https://github.com/Sehal-22I-0604/AI_Assignment_2/assets/160497952/76c1cbcd-1cd0-42e0-81b0-d31f7cea4856)
+
+![image](https://github.com/Sehal-22I-0604/AI_Assignment_2/assets/160497952/82335907-531e-4432-9a0d-3d9738acbf55)
+
+![image](https://github.com/Sehal-22I-0604/AI_Assignment_2/assets/160497952/7b5a86f8-8ac9-4864-ae14-7c400997fc82)
